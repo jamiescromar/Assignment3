@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "List of Movies";
+}
+@model IEnumerable<Assignment3.Models.NewMovieResponse>
+
+<h1>@ViewBag.Title</h1>
+<table>
+    <thead>
+            <tr>
+                <th style="padding-left:8px; padding-right:8px;">Category</th>
+                <th style="padding-left:8px; padding-right:8px;">Title</th>
+                <th style="padding-left:8px; padding-right:8px;">Year</th>
+                <th style="padding-left:8px; padding-right:8px;">Director</th>
+                <th style="padding-left:8px; padding-right:8px;">Rating</th>
+                <th style="padding-left:8px; padding-right:8px;">Edited</th>
+                <th style="padding-left:8px; padding-right:8px;">Lent To</th>
+                <th style="padding-left:8px; padding-right:8px;">Notes</th>
+            </tr>
+    </thead>
+    <tbody>
+        @foreach (Assignment3.Models.NewMovieResponse x in Model)
+        {
+            @if (x.Title != "Independence Day")
+            {
+                <tr>
+                    <td style="padding-left:8px; padding-right:8px;">@x.Category</td>
+                    <td style="padding-left:8px; padding-right:8px;">@x.Title</td>
+                    <td style="padding-left:8px; padding-right:8px;">@x.Year</td>
+                    <td style="padding-left:8px; padding-right:8px;">@x.Director</td>
+                    <td style="padding-left:8px; padding-right:8px;">@x.Rating</td>
+                    <td style="padding-left:8px; padding-right:8px;">@x.Edited</td>
+                    <td style="padding-left:8px; padding-right:8px;">@x.LentTo</td>
+                    <td style="padding-left:8px; padding-right:8px;">@x.Notes</td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
