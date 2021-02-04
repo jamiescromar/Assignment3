@@ -10,6 +10,7 @@
 <!--Create a form that will pull new movie information-->
 <form method="post" asp-action="NewMovie">
     <div asp-validation-summary="All"></div>
+    <!--Create Input for Category: It will be a dropdown-->
     <label asp-for="Category">Category</label>
     <select asp-for="Category" id="Category">
         <option value="">Select One</option>
@@ -23,15 +24,19 @@
         <option value="VHS">VHS</option>
     </select><br />
 
+    <!--Create Input for Title-->
     <label asp-for="Title">Title</label>
     <input asp-for="Title" id="Title" /><br />
 
+    <!--Create Input for Year-->
     <label asp-for="Year">Year</label>
     <input asp-for="Year" id="Year" /><br />
 
+    <!--Create Input for Director-->
     <label asp-for="Director">Director</label>
     <input asp-for="Director" id="Director" /><br />
 
+    <!--Create Input for Rating: This will be a dropdown-->
     <label asp-for="Rating">Rating</label>
     <select asp-for="Rating" id="Rating">
         <option value="">Select One</option>
@@ -46,6 +51,7 @@
         <option value="TV-14">TV-14</option>
     </select><br />
 
+    <!--Create Input for Edited: This will be a drop down boolean-->
     <label asp-for="Edited">Edited</label>
     <select asp-for="Edited" id="Edited">
         <option value="">Select One</option>
@@ -53,9 +59,11 @@
         <option value="False">False</option>
     </select><br />
 
+    <!--Create Input for Lent To-->
     <label asp-for="LentTo">Lent To</label>
     <input asp-for="LentTo" id="LentTo" /><br />
 
+    <!--Create Input for Notes-->
     <label asp-for="Notes">Notes</label>
     <input asp-for="Notes" id="Notes" /><br />
     <!--This button will be sumbitted to the model and make it better-->

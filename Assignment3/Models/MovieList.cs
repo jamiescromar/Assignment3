@@ -7,6 +7,7 @@ namespace Assignment3.Models
 {
     public static class MovieList
     {
+        //This is creating a new list object from the models file "New Movie Response"
         private static List<NewMovieResponse> movies = new List<NewMovieResponse>();
 
         //Enumerate a list
