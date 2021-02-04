@@ -4,12 +4,13 @@
 @{
     ViewBag.Title = "List of Movies";
 }
+<!--Call the model and make in IEnumerable-->
 @model IEnumerable<Assignment3.Models.NewMovieResponse>
 
 <h1>@ViewBag.Title</h1>
 <table>
     <thead>
-            <tr>
+            <tr><!--This is creating the headers of the table-->
                 <th style="padding-left:8px; padding-right:8px;">Category</th>
                 <th style="padding-left:8px; padding-right:8px;">Title</th>
                 <th style="padding-left:8px; padding-right:8px;">Year</th>
@@ -25,7 +26,7 @@
         {
             @if (x.Title != "Independence Day")
             {
-                <tr>
+                <tr><!--This is assigning the model variables to the list so that it can be seen in this view-->
                     <td style="padding-left:8px; padding-right:8px;">@x.Category</td>
                     <td style="padding-left:8px; padding-right:8px;">@x.Title</td>
                     <td style="padding-left:8px; padding-right:8px;">@x.Year</td>

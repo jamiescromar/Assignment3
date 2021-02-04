@@ -17,17 +17,13 @@ namespace Assignment3.Controllers
         {
             _logger = logger;
         }
-
+        //Index.html this is the view for the index
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
+ 
+        //This is the view for the podcasts, create and action
         public IActionResult MyPodcasts()
         {
             return View();
